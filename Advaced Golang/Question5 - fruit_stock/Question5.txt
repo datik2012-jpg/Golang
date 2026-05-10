@@ -1,0 +1,7 @@
+We are working on a project for a grocery store. The store has a list of items that are currently in stock, and we need to implement a function that will return a list of items that are in a given price range.
+
+Expected Output:
+
+[{Apple 0.5} {Banana 0.25} {Orange 0.75}]
+[{Apple 0.5} {Orange 0.75}]
+[{Orange 0.75} {Pineapple 1.5}]
