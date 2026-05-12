@@ -18,6 +18,7 @@ func main() {
 	start := time.Now()
 	var wg sync.WaitGroup // this is wait group which we need for the task - to controll the finishing the gorutine
 	//we will create wait group of 100 (cause we have 100 go rutines ) and it will count-1 when go rutine finished to work
+	//in this way no order for gorutines - cause some gorutines can be completed before the next in order gorutine
 	wg.Add(100)
 	for i := 1; i <= 100; i++ {
 		fmt.Println("damo")

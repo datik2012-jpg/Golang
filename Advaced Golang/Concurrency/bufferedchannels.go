@@ -38,7 +38,7 @@ func buy(ch chan int, s *sync.WaitGroup) { //method  which READ the VALUES from 
 	s.Done() //we do -1 for a wait group
 }
 
-//can be correct version which read 3 values + close the channel
+//can be correct version which read 3 values + close the channel. Even when channel is close - it will resieve try until it has at least one value inside.When channels is epty it will recieve - false: val, ok := <-ch
 /*
 package main
 
