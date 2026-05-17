@@ -1,0 +1,48 @@
+In this question, we are building a Go application that involves interacting with a remote API. We want to handle API errors in a consistent and structured way. We have chosen to use the errors package to accomplish this task.
+
+
+Our task is to create a new error type called APIError that implements the error interface.
+The APIError type should have the following fields:
+
+
+
+Message: A string that describes the error.
+
+
+Code: An integer that represents the error code returned by the API.
+
+
+Details: A map[string]interface{} that contains additional error details.
+
+
+We should implement the Error method for the APIError type, which should return the error message. Also, we should implement a function called NewAPIError that creates a new instance of the APIError type.
+
+package main
+
+import (
+    "fmt"
+)
+
+type APIError struct {
+    // your code goes here
+}
+
+func (e *APIError) Error() string {
+    // your code goes here
+}
+
+func NewAPIError(code int, message string, details map[string]interface{}) error {
+    // your code goes here
+}
+
+func main() {
+    err := NewAPIError(400, "Bad request", map[string]interface{}{
+        "field": "username",
+        "error": "cannot be empty",
+    })
+    fmt.Println(err.Error())
+}
+
+Expected Output:
+
+Bad request
